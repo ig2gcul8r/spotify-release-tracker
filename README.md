@@ -104,3 +104,4 @@ GitHub Actions (毎日9:00 JST)
        │    └─ Googleカレンダーが購読URLから自動同期
        └─ 新譜があれば Gmail SMTP でメール通知
 ```
+# spotify-release-tracker
