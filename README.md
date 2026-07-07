@@ -105,3 +105,4 @@ GitHub Actions (毎日9:00 JST)
        └─ 新譜があれば Gmail SMTP でメール通知
 ```
 # spotify-release-tracker
+# spotify-release-tracker
