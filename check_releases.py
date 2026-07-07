@@ -59,7 +59,7 @@ def api_get(url: str, token: str, params: dict | None = None) -> dict:
             timeout=30,
         )
         if resp.status_code == 429:  # rate limit
-            wait = int(resp.headers.get("Retry-After", "5"))
+            wait = min(int(resp.headers.get("Retry-After", "5")), 60)  # 上限60秒
             print(f"  Rate limited. Waiting {wait}s...")
             time.sleep(wait + 1)
             continue
