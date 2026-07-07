@@ -36,6 +36,11 @@ NOTIFY_TO = os.environ.get("NOTIFY_TO", GMAIL_ADDRESS)
 
 
 # ========== Spotify API ==========
+class RateLimitAbort(Exception):
+    """レート制限ペナルティ中(長時間のRetry-After)を示す例外"""
+    pass
+
+
 def get_access_token() -> str:
     resp = requests.post(
         "https://accounts.spotify.com/api/token",
@@ -59,7 +64,11 @@ def api_get(url: str, token: str, params: dict | None = None) -> dict:
             timeout=30,
         )
         if resp.status_code == 429:  # rate limit
-            wait = min(int(resp.headers.get("Retry-After", "5")), 60)  # 上限60秒
+            wait = int(resp.headers.get("Retry-After", "5"))
+            if wait > 300:  # 5分超の待機指示 = ペナルティ中。今回は諦める
+                raise RateLimitAbort(
+                    f"Retry-After={wait}s. Aborting this run."
+                )
             print(f"  Rate limited. Waiting {wait}s...")
             time.sleep(wait + 1)
             continue
@@ -230,6 +239,10 @@ def main() -> None:
         print(f"[{i}/{len(artists)}] {artist['name']}")
         try:
             releases = get_recent_releases(token, artist)
+        except RateLimitAbort as e:
+            print(f"Rate limit penalty active: {e}")
+            print("State not saved. Will retry on next scheduled run.")
+            sys.exit(1)
         except Exception as e:
             print(f"  Error: {e}")
             continue
@@ -243,7 +256,7 @@ def main() -> None:
                 seen_ids.add(r["id"])
                 if not first_run:
                     new_releases.append(r)
-        time.sleep(0.2)  # rate limitに優しく
+        time.sleep(1.0)  # rate limitに優しく(363組なら約7分)
 
     # 古いリリースをICS/stateから掃除(表示対象外)
     state["releases"] = {
