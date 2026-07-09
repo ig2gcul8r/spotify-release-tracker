@@ -41,6 +41,7 @@
     "3eRJks5hFgoZnXhHlUDWt3",
     "3lk68Op8fiiIrdL1VLoHcp",
     "3oyrHxgRO9HNMQx5mdML1u",
+    "3yMcy9pftiW6sPrscdImlT",
     "46mmzxXIthz1rvA53mQsY1",
     "490RXPo7Zm3PATJMtUEtSM",
     "4FRJ8Vn159vRiyLTdcGAWI",
@@ -50,6 +51,7 @@
     "4oHRMGp6JIb6zqUQb4WPMu",
     "4si3iSvc37V6BJHtQ6XEeI",
     "4tUAMM8IJoe58btljM4A8x",
+    "4vMTbFzgFrwSTqwd00SB2I",
     "51ihz2jRNQwzVyqtFQRN3Z",
     "54VBYxjusWPgnlrOeKQ9Q7",
     "56he7oUVL6bHVhaq2FpVzV",
@@ -59,6 +61,7 @@
     "5Q7KPQNw5Cgj45IukOMrE1",
     "5QFHiTkr2OHLAPRWvaD0Hw",
     "5UamcRKGRLG1mxQ16aonmK",
+    "5wnd0iIkfGJGwKhNZjSu6W",
     "6SC1rulRuCQizgLJVS2zHN",
     "6YN0lxBGhjZRm2vd6pCdtW",
     "6ZaJtyD6Zb53rMOtqPTJR1",
@@ -793,6 +796,36 @@
       "release_date_precision": "day",
       "url": "https://open.spotify.com/album/4gT5itNBVYzC9jcgMvvOUa",
       "total_tracks": 16
+    },
+    "4vMTbFzgFrwSTqwd00SB2I": {
+      "id": "4vMTbFzgFrwSTqwd00SB2I",
+      "name": "Promising Young Woman",
+      "artist": "Isabel LaRosa",
+      "type": "album",
+      "release_date": "2026-06-26",
+      "release_date_precision": "day",
+      "url": "https://open.spotify.com/album/4vMTbFzgFrwSTqwd00SB2I",
+      "total_tracks": 7
+    },
+    "5wnd0iIkfGJGwKhNZjSu6W": {
+      "id": "5wnd0iIkfGJGwKhNZjSu6W",
+      "name": "Promising Young Woman",
+      "artist": "Isabel LaRosa",
+      "type": "single",
+      "release_date": "2026-06-05",
+      "release_date_precision": "day",
+      "url": "https://open.spotify.com/album/5wnd0iIkfGJGwKhNZjSu6W",
+      "total_tracks": 6
+    },
+    "3yMcy9pftiW6sPrscdImlT": {
+      "id": "3yMcy9pftiW6sPrscdImlT",
+      "name": "Hallucination",
+      "artist": "Isabel LaRosa",
+      "type": "single",
+      "release_date": "2026-05-01",
+      "release_date_precision": "day",
+      "url": "https://open.spotify.com/album/3yMcy9pftiW6sPrscdImlT",
+      "total_tracks": 1
     }
   },
   "first_run_done": false,
@@ -868,6 +901,7 @@
     "5SHgclK1ZpTdfdAmXW7J6s",
     "5T0MSzX9RC5NA6gAI6irSn",
     "5XKFrudbV4IiuE5WuTPRmT",
+    "5arKwJZEvT5uKq4o0JfqR4",
     "5tOWIviwLM1EIqGAbF8VSU",
     "5xkAtLTf309LAGZTbvULBn",
     "605C4AcUUwB66JjpKjX1aO",
