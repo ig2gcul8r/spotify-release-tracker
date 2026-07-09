@@ -122,7 +122,7 @@ def get_recent_releases(token: str, artist: dict) -> list[dict]:
 def load_state() -> dict:
     if STATE_FILE.exists():
         return json.loads(STATE_FILE.read_text(encoding="utf-8"))
-    return {"seen_ids": [], "releases": {}, "first_run_done": False}
+    return {"seen_ids": [], "releases": {}, "first_run_done": False, "cycle_checked": []}
 
 
 def save_state(state: dict) -> None:
@@ -230,23 +230,37 @@ def main() -> None:
 
     state = load_state()
     seen_ids = set(state["seen_ids"])
-    first_run = not state.get("first_run_done", False)
+    notifications_active = state.get("first_run_done", False)
+    cycle_checked = set(state.get("cycle_checked", []))
     cutoff = datetime.now() - timedelta(days=LOOKBACK_DAYS)
 
-    new_releases: list[dict] = []
+    # 前回中断した続きから再開(チェックポイント)
+    remaining = [a for a in artists if a["id"] not in cycle_checked]
+    if not remaining:  # 全員チェック済み → 新しい周回を開始
+        cycle_checked = set()
+        remaining = artists
+    print(
+        f"  Checking {len(remaining)} artists this run "
+        f"({len(cycle_checked)} already done this cycle)."
+    )
 
-    for i, artist in enumerate(artists, 1):
-        print(f"[{i}/{len(artists)}] {artist['name']}")
+    new_releases: list[dict] = []
+    aborted = False
+
+    for i, artist in enumerate(remaining, 1):
+        print(f"[{i}/{len(remaining)}] {artist['name']}")
         try:
             releases = get_recent_releases(token, artist)
         except RateLimitAbort as e:
             print(f"Rate limit penalty active: {e}")
-            print("State not saved. Will retry on next scheduled run.")
-            sys.exit(1)
+            print("Saving progress. Will resume from here on next run.")
+            aborted = True
+            break
         except Exception as e:
             print(f"  Error: {e}")
             continue
 
+        cycle_checked.add(artist["id"])
         for r in releases:
             dt = parse_release_date(r)
             if dt is None or dt < cutoff:
@@ -254,9 +268,18 @@ def main() -> None:
             state["releases"][r["id"]] = r
             if r["id"] not in seen_ids:
                 seen_ids.add(r["id"])
-                if not first_run:
+                if notifications_active:
                     new_releases.append(r)
-        time.sleep(1.0)  # rate limitに優しく(363組なら約7分)
+        time.sleep(1.0)  # rate limitに優しく
+
+    # 一巡完了の判定
+    cycle_complete = not aborted and len(cycle_checked) >= len(artists)
+    if cycle_complete:
+        state["first_run_done"] = True  # 初回一巡完了 → 以降は通知有効
+        cycle_checked = set()  # 次回から新しい周回
+        print("Cycle complete.")
+
+    state["cycle_checked"] = sorted(cycle_checked)
 
     # 古いリリースをICS/stateから掃除(表示対象外)
     state["releases"] = {
@@ -265,22 +288,26 @@ def main() -> None:
         if (d := parse_release_date(r)) and d >= cutoff
     }
     state["seen_ids"] = sorted(seen_ids)
-    state["first_run_done"] = True
     save_state(state)
 
     ICS_FILE.parent.mkdir(parents=True, exist_ok=True)
     ICS_FILE.write_text(generate_ics(state["releases"]), encoding="utf-8")
     print(f"ICS written: {ICS_FILE} ({len(state['releases'])} events)")
 
-    if first_run:
-        print("First run: baseline recorded. No notifications sent.")
-    elif new_releases:
+    if new_releases:
         print(f"{len(new_releases)} new release(s) found!")
         for r in new_releases:
             print(f"  - {r['artist']}: {r['name']} ({r['release_date']})")
         send_email(new_releases)
+    elif not notifications_active:
+        print("Baseline still being recorded. Notifications start "
+              "after the first full cycle completes.")
     else:
         print("No new releases.")
+
+    if aborted:
+        print("NOTE: Run ended early due to rate limit penalty. "
+              "Progress was saved and will resume next run.")
 
 
 if __name__ == "__main__":
