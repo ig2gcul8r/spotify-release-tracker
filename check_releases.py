@@ -6,6 +6,8 @@ Spotify新譜トラッカー
 - 新譜があればメール通知
 """
 
+from __future__ import annotations
+
 import json
 import os
 import smtplib
