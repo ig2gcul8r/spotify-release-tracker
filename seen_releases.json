@@ -22,6 +22,7 @@
     "1Eu5dUMQ6zBnwL0cNQ5V4c",
     "1HRibxEOHHtZuhRMmCkpVO",
     "1HgxS3QtHoYbHvmjtHnsci",
+    "1ND6tGCzJKjBigJfnBSEQl",
     "1eWcwjwfEHXp1zdBSsbnu2",
     "1iBUPWKDIoHqRhNxmnNQps",
     "1jWyDJiCWPOp0Xq3dvDxos",
@@ -29,6 +30,7 @@
     "1k79RlHZDI58FbHus50Jz1",
     "1my50kfCWILSC6UKkEgn9q",
     "1rwNi8qSnjRZQRfFlcpAGC",
+    "1yGhvmVC9eJXFO1xs3ttwf",
     "2EAbXVmQUrylFiXVSQp6TJ",
     "2GLrbPiNZrX5V6IfwCQpEF",
     "2Gda3n8wksh8dnHDLAoIj3",
@@ -1180,6 +1182,26 @@
       "release_date_precision": "day",
       "url": "https://open.spotify.com/album/1rwNi8qSnjRZQRfFlcpAGC",
       "total_tracks": 9
+    },
+    "1yGhvmVC9eJXFO1xs3ttwf": {
+      "id": "1yGhvmVC9eJXFO1xs3ttwf",
+      "name": "Here With Me Now",
+      "artist": "Khalid",
+      "type": "single",
+      "release_date": "2026-06-12",
+      "release_date_precision": "day",
+      "url": "https://open.spotify.com/album/1yGhvmVC9eJXFO1xs3ttwf",
+      "total_tracks": 1
+    },
+    "1ND6tGCzJKjBigJfnBSEQl": {
+      "id": "1ND6tGCzJKjBigJfnBSEQl",
+      "name": "Save My Love (feat. Gryffin) [Acoustic Version]",
+      "artist": "Khalid",
+      "type": "single",
+      "release_date": "2026-06-03",
+      "release_date_precision": "day",
+      "url": "https://open.spotify.com/album/1ND6tGCzJKjBigJfnBSEQl",
+      "total_tracks": 3
     }
   },
   "first_run_done": false,
@@ -1320,6 +1342,7 @@
     "6GwNGuDRNbx5XwoHQA3QiD",
     "6I8TDGeUmmLom8auKPzMdX",
     "6JL8zeS1NmiOftqZTRgdTz",
+    "6LuN9FCkKOj5PcnpouEgny",
     "6MERXsiRbur2oJZFgYRDKz",
     "6MjrwCzODvPrFK6grutJB0",
     "6Mn5HNY6bJSqK31cRa0uiv",
@@ -1351,13 +1374,21 @@
   ],
   "playlist_id": "10j7gNDPw1Yj2EI9v6f7DZ",
   "playlist_synced_ids": [
+    "172FBTtpqNv9blWGkjgmvP",
     "18OwtNEeXcKttR8Y4WsNV2",
+    "1eWcwjwfEHXp1zdBSsbnu2",
+    "1iBUPWKDIoHqRhNxmnNQps",
     "1my50kfCWILSC6UKkEgn9q",
     "2UisHSnKxXssQClgyFV5Jr",
+    "3CSeM9Ufgof02QTlzL5TEm",
     "4FRJ8Vn159vRiyLTdcGAWI",
+    "4SPLV5f22Ty1PVjntvyy5X",
+    "5Q7KPQNw5Cgj45IukOMrE1",
     "5UamcRKGRLG1mxQ16aonmK",
     "6nNJN0zUE7bA10yPeeAaXX",
+    "6vt7I2vcCWzmo8ExiTahAA",
     "7iZ7OTDZ935zYgzNNSc32Y",
-    "7jBvgF3VkF58blzE4NWOye"
+    "7jBvgF3VkF58blzE4NWOye",
+    "7pOzBulb4xSuKLGHekguEk"
   ]
 }
