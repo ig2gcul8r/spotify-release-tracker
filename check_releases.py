@@ -220,9 +220,8 @@ def mb_get_upcoming(artist_name: str) -> list[dict]:
 def ensure_playlist(token: str, state: dict) -> str:
     if state.get("playlist_id"):
         return state["playlist_id"]
-    user_id = api_get("https://api.spotify.com/v1/me", token)["id"]
     resp = api_post(
-        f"https://api.spotify.com/v1/users/{user_id}/playlists",
+        "https://api.spotify.com/v1/me/playlists",
         token,
         {
             "name": PLAYLIST_NAME,
@@ -252,7 +251,7 @@ def get_album_track_uris(token: str, album_id: str) -> list[str]:
 def add_tracks_to_playlist(token: str, playlist_id: str, uris: list[str]) -> None:
     for i in range(0, len(uris), 100):
         api_post(
-            f"https://api.spotify.com/v1/playlists/{playlist_id}/tracks",
+            f"https://api.spotify.com/v1/playlists/{playlist_id}/items",
             token,
             {"uris": uris[i : i + 100]},
         )
@@ -446,6 +445,8 @@ def main() -> None:
         sync_playlist(token, state)
     except RateLimitAbort as e:
         print(f"  Playlist sync hit rate limit: {e}")
+    except Exception as e:
+        print(f"  Playlist sync error (skipping for this run): {e}")
 
     # 前回中断した続きから再開(チェックポイント)
     remaining = [a for a in artists if a["id"] not in cycle_checked]
