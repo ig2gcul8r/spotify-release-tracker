@@ -27,6 +27,13 @@ LOOKBACK_DAYS = 90          # 初回実行時・ICSに含める過去日数
 MAX_ALBUMS_PER_ARTIST = 10  # アーティストごとに確認する最新リリース数
 MARKET = "JP"
 
+# MusicBrainz(未来のリリース予定の取得)
+MB_LOOKAHEAD_DAYS = 365
+MB_USER_AGENT = (
+    "spotify-release-tracker/1.0 "
+    "(https://github.com/ig2gcul8r/spotify-release-tracker)"
+)
+
 SPOTIFY_CLIENT_ID = os.environ["SPOTIFY_CLIENT_ID"]
 SPOTIFY_CLIENT_SECRET = os.environ["SPOTIFY_CLIENT_SECRET"]
 SPOTIFY_REFRESH_TOKEN = os.environ["SPOTIFY_REFRESH_TOKEN"]
@@ -120,7 +127,65 @@ def get_recent_releases(token: str, artist: dict) -> list[dict]:
     return releases
 
 
-# ========== 状態管理 ==========
+# ========== MusicBrainz(リリース予定) ==========
+def mb_get_upcoming(artist_name: str) -> list[dict]:
+    """MusicBrainzからアナウンス済みの未来リリースを取得"""
+    today = datetime.now().strftime("%Y-%m-%d")
+    horizon = (
+        datetime.now() + timedelta(days=MB_LOOKAHEAD_DAYS)
+    ).strftime("%Y-%m-%d")
+    query = (
+        f'artistname:"{artist_name}" '
+        f"AND date:[{today} TO {horizon}] AND status:official"
+    )
+    try:
+        resp = requests.get(
+            "https://musicbrainz.org/ws/2/release",
+            params={"query": query, "fmt": "json", "limit": 20},
+            headers={"User-Agent": MB_USER_AGENT},
+            timeout=30,
+        )
+        if resp.status_code == 503:  # MB側の混雑。今回はスキップ
+            time.sleep(2)
+            return []
+        resp.raise_for_status()
+        data = resp.json()
+    except Exception as e:
+        print(f"  MusicBrainz error: {e}")
+        return []
+
+    results = []
+    seen_titles = set()
+    for rel in data.get("releases", []):
+        credit = (rel.get("artist-credit") or [{}])[0].get("name", "")
+        if credit.casefold() != artist_name.casefold():
+            continue  # 同名別アーティスト対策: 完全一致のみ採用
+        date = rel.get("date", "")
+        if not date or date <= today:
+            continue
+        title = rel.get("title", "")
+        if not title or title.casefold() in seen_titles:
+            continue  # 複数エディションの重複排除
+        seen_titles.add(title.casefold())
+        ptype = (rel.get("release-group") or {}).get("primary-type") or "album"
+        precision = {10: "day", 7: "month", 4: "year"}.get(len(date), "day")
+        results.append(
+            {
+                "id": f"mb_{rel['id']}",
+                "name": title,
+                "artist": artist_name,
+                "type": ptype.lower(),
+                "release_date": date,
+                "release_date_precision": precision,
+                "url": f"https://musicbrainz.org/release/{rel['id']}",
+                "total_tracks": rel.get("track-count") or 0,
+                "upcoming": True,
+            }
+        )
+    return results
+
+
+
 def load_state() -> dict:
     if STATE_FILE.exists():
         return json.loads(STATE_FILE.read_text(encoding="utf-8"))
@@ -172,11 +237,19 @@ def generate_ics(releases: dict) -> str:
             continue
         date_str = dt.strftime("%Y%m%d")
         end_str = (dt + timedelta(days=1)).strftime("%Y%m%d")
-        type_label = {"album": "アルバム", "single": "シングル"}.get(r["type"], r["type"])
-        summary = escape_ics(f"🎵 {r['artist']} — {r['name']}")
-        description = escape_ics(
-            f"{type_label} / {r['total_tracks']}曲\n{r['url']}"
+        type_label = {"album": "アルバム", "single": "シングル", "ep": "EP"}.get(
+            r["type"], r["type"]
         )
+        if r.get("upcoming"):
+            summary = escape_ics(f"📅 {r['artist']} — {r['name']}(予定)")
+            description = escape_ics(
+                f"リリース予定 / {type_label}\n{r['url']}"
+            )
+        else:
+            summary = escape_ics(f"🎵 {r['artist']} — {r['name']}")
+            description = escape_ics(
+                f"{type_label} / {r['total_tracks']}曲\n{r['url']}"
+            )
         lines += [
             "BEGIN:VEVENT",
             f"UID:{rid}@spotify-release-tracker",
@@ -198,20 +271,41 @@ def send_email(new_releases: list[dict]) -> None:
         print("Gmail credentials not set. Skipping email notification.")
         return
 
-    body_lines = ["フォロー中アーティストの新譜が見つかりました:\n"]
-    for r in new_releases:
-        type_label = {"album": "アルバム", "single": "シングル"}.get(r["type"], r["type"])
-        body_lines.append(
-            f"● {r['artist']} — {r['name']}\n"
-            f"   {type_label} / リリース日: {r['release_date']}\n"
-            f"   {r['url']}\n"
-        )
+    released = [r for r in new_releases if not r.get("upcoming")]
+    upcoming = [r for r in new_releases if r.get("upcoming")]
+
+    body_lines = []
+    if released:
+        body_lines.append("🎵 新譜がリリースされました:\n")
+        for r in released:
+            type_label = {"album": "アルバム", "single": "シングル", "ep": "EP"}.get(
+                r["type"], r["type"]
+            )
+            body_lines.append(
+                f"● {r['artist']} — {r['name']}\n"
+                f"   {type_label} / リリース日: {r['release_date']}\n"
+                f"   {r['url']}\n"
+            )
+    if upcoming:
+        body_lines.append("\n📅 今後のリリース予定が発表されました:\n")
+        for r in upcoming:
+            type_label = {"album": "アルバム", "single": "シングル", "ep": "EP"}.get(
+                r["type"], r["type"]
+            )
+            body_lines.append(
+                f"● {r['artist']} — {r['name']}\n"
+                f"   {type_label} / 予定日: {r['release_date']}\n"
+                f"   {r['url']}\n"
+            )
     body_lines.append("\n※Googleカレンダーにも自動反映されます(購読設定済みの場合)")
 
+    subject_parts = []
+    if released:
+        subject_parts.append(f"新譜{len(released)}件")
+    if upcoming:
+        subject_parts.append(f"リリース予定{len(upcoming)}件")
     msg = MIMEText("\n".join(body_lines), "plain", "utf-8")
-    msg["Subject"] = Header(
-        f"🎵 新譜リリース通知 ({len(new_releases)}件)", "utf-8"
-    )
+    msg["Subject"] = Header(f"🎵 {' / '.join(subject_parts)}", "utf-8")
     msg["From"] = GMAIL_ADDRESS
     msg["To"] = NOTIFY_TO
 
@@ -263,7 +357,9 @@ def main() -> None:
             continue
 
         cycle_checked.add(artist["id"])
+        spotify_keys = set()
         for r in releases:
+            spotify_keys.add((r["artist"].casefold(), r["name"].casefold()))
             dt = parse_release_date(r)
             if dt is None or dt < cutoff:
                 continue
@@ -272,6 +368,18 @@ def main() -> None:
                 seen_ids.add(r["id"])
                 if notifications_active:
                     new_releases.append(r)
+
+        # MusicBrainzでリリース予定をチェック
+        for u in mb_get_upcoming(artist["name"]):
+            key = (u["artist"].casefold(), u["name"].casefold())
+            if key in spotify_keys:
+                continue  # Spotify側に既にある(=リリース済み)ものは除外
+            state["releases"][u["id"]] = u
+            if u["id"] not in seen_ids:
+                seen_ids.add(u["id"])
+                if notifications_active:
+                    new_releases.append(u)
+
         time.sleep(1.0)  # rate limitに優しく
 
     # 一巡完了の判定
@@ -283,12 +391,20 @@ def main() -> None:
 
     state["cycle_checked"] = sorted(cycle_checked)
 
-    # 古いリリースをICS/stateから掃除(表示対象外)
-    state["releases"] = {
-        rid: r
-        for rid, r in state["releases"].items()
-        if (d := parse_release_date(r)) and d >= cutoff
-    }
+    # 掃除: 通常リリースは90日より古いものを、予定は日付が過ぎたものを削除
+    # (予定日が来ればSpotify側のチェックが実物を拾うため)
+    today_dt = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
+    pruned = {}
+    for rid, r in state["releases"].items():
+        d = parse_release_date(r)
+        if d is None:
+            continue
+        if r.get("upcoming"):
+            if d >= today_dt:
+                pruned[rid] = r
+        elif d >= cutoff:
+            pruned[rid] = r
+    state["releases"] = pruned
     state["seen_ids"] = sorted(seen_ids)
     save_state(state)
 
