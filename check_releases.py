@@ -35,7 +35,7 @@ MB_USER_AGENT = (
 )
 
 # プレイリスト自動追加(リリース済みの全曲)
-PLAYLIST_NAME = "Release Tracker — 全リリース"
+PLAYLIST_NAME = "Release Tracker"
 PLAYLIST_SYNC_BUDGET = 15  # 1実行あたりプレイリスト同期に使うAPIリクエスト数の目安
                            # (アーティストチェックの予算を圧迫しすぎないための上限)
 
