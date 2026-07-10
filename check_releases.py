@@ -34,6 +34,11 @@ MB_USER_AGENT = (
     "(https://github.com/ig2gcul8r/spotify-release-tracker)"
 )
 
+# プレイリスト自動追加(リリース済みの全曲)
+PLAYLIST_NAME = "Release Tracker — 全リリース"
+PLAYLIST_SYNC_BUDGET = 15  # 1実行あたりプレイリスト同期に使うAPIリクエスト数の目安
+                           # (アーティストチェックの予算を圧迫しすぎないための上限)
+
 SPOTIFY_CLIENT_ID = os.environ["SPOTIFY_CLIENT_ID"]
 SPOTIFY_CLIENT_SECRET = os.environ["SPOTIFY_CLIENT_SECRET"]
 SPOTIFY_REFRESH_TOKEN = os.environ["SPOTIFY_REFRESH_TOKEN"]
@@ -83,6 +88,28 @@ def api_get(url: str, token: str, params: dict | None = None) -> dict:
             continue
         resp.raise_for_status()
         return resp.json()
+    raise RuntimeError(f"Failed after retries: {url}")
+
+
+def api_post(url: str, token: str, json_body: dict) -> dict:
+    for attempt in range(5):
+        resp = requests.post(
+            url,
+            headers={"Authorization": f"Bearer {token}"},
+            json=json_body,
+            timeout=30,
+        )
+        if resp.status_code == 429:  # rate limit
+            wait = int(resp.headers.get("Retry-After", "5"))
+            if wait > 300:
+                raise RateLimitAbort(
+                    f"Retry-After={wait}s. Aborting this run."
+                )
+            print(f"  Rate limited. Waiting {wait}s...")
+            time.sleep(wait + 1)
+            continue
+        resp.raise_for_status()
+        return resp.json() if resp.content else {}
     raise RuntimeError(f"Failed after retries: {url}")
 
 
@@ -188,6 +215,86 @@ def mb_get_upcoming(artist_name: str) -> list[dict]:
         )
     return results
 
+
+# ========== プレイリスト同期 ==========
+def ensure_playlist(token: str, state: dict) -> str:
+    if state.get("playlist_id"):
+        return state["playlist_id"]
+    user_id = api_get("https://api.spotify.com/v1/me", token)["id"]
+    resp = api_post(
+        f"https://api.spotify.com/v1/users/{user_id}/playlists",
+        token,
+        {
+            "name": PLAYLIST_NAME,
+            "public": False,
+            "description": "リリース済みの新譜を自動追加(spotify-release-tracker)",
+        },
+    )
+    state["playlist_id"] = resp["id"]
+    print(f"  Created playlist: {resp['id']}")
+    return resp["id"]
+
+
+def get_album_track_uris(token: str, album_id: str) -> list[str]:
+    uris = []
+    url = f"https://api.spotify.com/v1/albums/{album_id}/tracks"
+    params = {"limit": 50, "market": MARKET}
+    while url:
+        data = api_get(url, token, params)
+        uris.extend(
+            f"spotify:track:{t['id']}" for t in data.get("items", []) if t.get("id")
+        )
+        url = data.get("next")
+        params = None  # next はクエリ込みのフルURL
+    return uris
+
+
+def add_tracks_to_playlist(token: str, playlist_id: str, uris: list[str]) -> None:
+    for i in range(0, len(uris), 100):
+        api_post(
+            f"https://api.spotify.com/v1/playlists/{playlist_id}/tracks",
+            token,
+            {"uris": uris[i : i + 100]},
+        )
+
+
+def sync_playlist(token: str, state: dict) -> None:
+    """リリース済み(upcomingでない)の未同期分をプレイリストに追加。
+    予算(PLAYLIST_SYNC_BUDGET)を使い切ったら中断し、続きは次回実行時に。"""
+    synced = set(state.get("playlist_synced_ids", []))
+    pending = [
+        (rid, r)
+        for rid, r in state["releases"].items()
+        if not r.get("upcoming") and rid not in synced
+    ]
+    if not pending:
+        return
+
+    playlist_id = ensure_playlist(token, state)
+    print(f"  Syncing playlist: {len(pending)} release(s) pending.")
+    budget = PLAYLIST_SYNC_BUDGET
+    added = 0
+    for rid, r in pending:
+        if budget <= 0:
+            print(f"  Playlist sync budget used up. {len(pending) - added} left for next run.")
+            break
+        try:
+            uris = get_album_track_uris(token, rid)
+            budget -= 1
+            if uris:
+                add_tracks_to_playlist(token, playlist_id, uris)
+                budget -= 1
+            synced.add(rid)
+            added += 1
+            print(f"  Playlist: + {r['artist']} - {r['name']} ({len(uris)} tracks)")
+        except RateLimitAbort:
+            state["playlist_synced_ids"] = sorted(synced)
+            raise
+        except Exception as e:
+            print(f"  Playlist sync error for {r['artist']} - {r['name']}: {e}")
+            synced.add(rid)  # 取得不能なものは無限リトライしないようスキップ扱い
+        time.sleep(1.0)
+    state["playlist_synced_ids"] = sorted(synced)
 
 
 def load_state() -> dict:
@@ -333,6 +440,12 @@ def main() -> None:
     notifications_active = state.get("first_run_done", False)
     cycle_checked = set(state.get("cycle_checked", []))
     cutoff = datetime.now() - timedelta(days=LOOKBACK_DAYS)
+
+    print("Syncing playlist...")
+    try:
+        sync_playlist(token, state)
+    except RateLimitAbort as e:
+        print(f"  Playlist sync hit rate limit: {e}")
 
     # 前回中断した続きから再開(チェックポイント)
     remaining = [a for a in artists if a["id"] not in cycle_checked]

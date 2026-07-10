@@ -24,7 +24,7 @@ import webbrowser
 import requests
 
 REDIRECT_URI = "http://127.0.0.1:8888/callback"
-SCOPE = "user-follow-read"
+SCOPE = "user-follow-read playlist-modify-private"
 
 client_id = os.environ.get("SPOTIFY_CLIENT_ID") or input("Client ID: ").strip()
 client_secret = os.environ.get("SPOTIFY_CLIENT_SECRET") or input("Client Secret: ").strip()
