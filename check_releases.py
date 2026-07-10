@@ -88,11 +88,15 @@ def api_get(url: str, token: str, params: dict | None = None) -> dict:
 
 def get_followed_artists(token: str) -> list[dict]:
     artists = []
+    seen_ids = set()
     url = "https://api.spotify.com/v1/me/following"
     params = {"type": "artist", "limit": 50}
     while True:
         data = api_get(url, token, params)["artists"]
-        artists.extend(data["items"])
+        for item in data["items"]:
+            if item["id"] not in seen_ids:
+                seen_ids.add(item["id"])
+                artists.append(item)
         after = data.get("cursors", {}).get("after")
         if not after:
             break
