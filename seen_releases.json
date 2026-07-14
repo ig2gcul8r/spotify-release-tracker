@@ -78,6 +78,7 @@
     "39Mam6CVldJMYBypUpZ9n6",
     "3AGFxS8n4Bicv65GAOW3od",
     "3CSeM9Ufgof02QTlzL5TEm",
+    "3D1D6EStEZHBBxevQ9epWK",
     "3ELRc5dM7WtbN2OSawC2tD",
     "3GGPWismNDtBFF8EJxoiFI",
     "3Kl2WusJriZwxjNJTjbpPJ",
@@ -103,6 +104,7 @@
     "46mmzxXIthz1rvA53mQsY1",
     "48IoD6wUziva5gklVyUPBr",
     "490RXPo7Zm3PATJMtUEtSM",
+    "4AoTQB7rFy5beg3xFDsY1v",
     "4FRJ8Vn159vRiyLTdcGAWI",
     "4MH2cB8M1yl9Gnz8r8bR0n",
     "4OMvPbXaYlbUm6TnwyXGct",
@@ -146,6 +148,7 @@
     "5ZKl6FzFtBJc3edhG04gxW",
     "5aEqG3iU8IAAKOH7ZQIXmT",
     "5eMSxw5F43b9x6J9NCzoc2",
+    "5hYAA9mL3awoyP8Nfy4ocM",
     "5kkZVGW8dox7UUbl1rkXBK",
     "5wnd0iIkfGJGwKhNZjSu6W",
     "67bPjQnDFPDf25kc65delu",
@@ -418,16 +421,6 @@
       "url": "https://open.spotify.com/album/2XyMvYW0CPR7P6vxSHFOd3",
       "total_tracks": 11
     },
-    "4si3iSvc37V6BJHtQ6XEeI": {
-      "id": "4si3iSvc37V6BJHtQ6XEeI",
-      "name": "Tokyo DisneySea 25th \"Sparkling Jubilee\" Music Album",
-      "artist": "Tokyo DisneySea",
-      "type": "album",
-      "release_date": "2026-04-15",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/4si3iSvc37V6BJHtQ6XEeI",
-      "total_tracks": 18
-    },
     "0QoWsjIuyL43riq1RHsK2c": {
       "id": "0QoWsjIuyL43riq1RHsK2c",
       "name": "Never Lost (Luedji Luna Remix)",
@@ -501,7 +494,7 @@
     "5FKnRUB5lt7z5ac1lmu3BE": {
       "id": "5FKnRUB5lt7z5ac1lmu3BE",
       "name": "The Devil Wears Prada 2 (Music From The Motion Picture)",
-      "artist": "Doechii",
+      "artist": "Izzy Escobar",
       "type": "album",
       "release_date": "2026-05-01",
       "release_date_precision": "day",
@@ -1931,16 +1924,6 @@
       "url": "https://open.spotify.com/album/4xpRM2I2QX0ZR13Tb7jMw3",
       "total_tracks": 12
     },
-    "0LFm8wMSiUpkbvwkPqWHNq": {
-      "id": "0LFm8wMSiUpkbvwkPqWHNq",
-      "name": "PERFECT",
-      "artist": "Taichi Mukai",
-      "type": "single",
-      "release_date": "2026-04-15",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/0LFm8wMSiUpkbvwkPqWHNq",
-      "total_tracks": 1
-    },
     "77lHr1rXYAkLjOVkcSXLGH": {
       "id": "77lHr1rXYAkLjOVkcSXLGH",
       "name": "烏 - Raven",
@@ -2071,16 +2054,6 @@
       "url": "https://open.spotify.com/album/0haLlb6CPtVmAQlasLrVFV",
       "total_tracks": 1
     },
-    "3Z28WbXa0mpnXpWXfpODoU": {
-      "id": "3Z28WbXa0mpnXpWXfpODoU",
-      "name": "NRG",
-      "artist": "DYGL",
-      "type": "single",
-      "release_date": "2026-04-15",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/3Z28WbXa0mpnXpWXfpODoU",
-      "total_tracks": 1
-    },
     "2mG7Jq4OnkQdpmemAmtXAQ": {
       "id": "2mG7Jq4OnkQdpmemAmtXAQ",
       "name": "Body So Tea",
@@ -2152,6 +2125,36 @@
       "url": "https://musicbrainz.org/release/01d7a618-6e55-4687-95bf-fd32e641b02e",
       "total_tracks": 12,
       "upcoming": true
+    },
+    "5hYAA9mL3awoyP8Nfy4ocM": {
+      "id": "5hYAA9mL3awoyP8Nfy4ocM",
+      "name": "Hotshot (Extra Time)",
+      "artist": "Izzy Escobar",
+      "type": "single",
+      "release_date": "2026-06-24",
+      "release_date_precision": "day",
+      "url": "https://open.spotify.com/album/5hYAA9mL3awoyP8Nfy4ocM",
+      "total_tracks": 1
+    },
+    "4AoTQB7rFy5beg3xFDsY1v": {
+      "id": "4AoTQB7rFy5beg3xFDsY1v",
+      "name": "Here You Come Again (From the Prime Original Series Every Year After)",
+      "artist": "Izzy Escobar",
+      "type": "single",
+      "release_date": "2026-05-29",
+      "release_date_precision": "day",
+      "url": "https://open.spotify.com/album/4AoTQB7rFy5beg3xFDsY1v",
+      "total_tracks": 1
+    },
+    "3D1D6EStEZHBBxevQ9epWK": {
+      "id": "3D1D6EStEZHBBxevQ9epWK",
+      "name": "Hate to Be the One",
+      "artist": "Izzy Escobar",
+      "type": "single",
+      "release_date": "2026-04-17",
+      "release_date_precision": "day",
+      "url": "https://open.spotify.com/album/3D1D6EStEZHBBxevQ9epWK",
+      "total_tracks": 1
     }
   },
   "first_run_done": true,
@@ -2232,6 +2235,7 @@
     "605C4AcUUwB66JjpKjX1aO",
     "632I7ofs9Csr2uPjfb2xyr",
     "63XBtGSEZINSyXylZxEUbv",
+    "63iuP8EumHpqaaMKyi0pxO",
     "63yrD80RY3RNEM2YDpUpO8",
     "67FB4n52MgexGQIG8s0yUH",
     "6AO3in7TlN2ab2o5Cq5lrs",
@@ -2261,13 +2265,17 @@
   "playlist_synced_ids": [
     "0QoWsjIuyL43riq1RHsK2c",
     "0TdADwn8RBoyHpXlumCfgk",
+    "0lwUMyyqQX3KxuTV8TdYyj",
     "172FBTtpqNv9blWGkjgmvP",
+    "18JIUrWc9SN596q2Km9KSJ",
     "18OwtNEeXcKttR8Y4WsNV2",
     "1Aye7tEOHfJ3hDJIeJFggF",
+    "1BrSn9sWO3Gi5trDQdc44a",
     "1Eu5dUMQ6zBnwL0cNQ5V4c",
     "1eWcwjwfEHXp1zdBSsbnu2",
     "1iBUPWKDIoHqRhNxmnNQps",
     "1jvG5wNg83Bm7ykfjwPHbZ",
+    "1k79RlHZDI58FbHus50Jz1",
     "1my50kfCWILSC6UKkEgn9q",
     "2EAbXVmQUrylFiXVSQp6TJ",
     "2GLrbPiNZrX5V6IfwCQpEF",
@@ -2282,6 +2290,7 @@
     "3YXe92ndLsBiVqIehZXEV3",
     "3eRJks5hFgoZnXhHlUDWt3",
     "3oyrHxgRO9HNMQx5mdML1u",
+    "46mmzxXIthz1rvA53mQsY1",
     "4FRJ8Vn159vRiyLTdcGAWI",
     "4SPLV5f22Ty1PVjntvyy5X",
     "4oHRMGp6JIb6zqUQb4WPMu",
@@ -2289,9 +2298,12 @@
     "4tUAMM8IJoe58btljM4A8x",
     "56he7oUVL6bHVhaq2FpVzV",
     "5FKnRUB5lt7z5ac1lmu3BE",
+    "5HA3LV3gpwjNDl2cjkzHYm",
     "5Q7KPQNw5Cgj45IukOMrE1",
+    "5QFHiTkr2OHLAPRWvaD0Hw",
     "5UamcRKGRLG1mxQ16aonmK",
     "6ZaJtyD6Zb53rMOtqPTJR1",
+    "6bkBdwYNeBqqLVF72acs0H",
     "6nNJN0zUE7bA10yPeeAaXX",
     "6nilpOGqIruVfH4w5UDJlY",
     "6vt7I2vcCWzmo8ExiTahAA",
