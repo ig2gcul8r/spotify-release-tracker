@@ -248,16 +248,6 @@
       "url": "https://open.spotify.com/album/4FRJ8Vn159vRiyLTdcGAWI",
       "total_tracks": 18
     },
-    "2UisHSnKxXssQClgyFV5Jr": {
-      "id": "2UisHSnKxXssQClgyFV5Jr",
-      "name": "I'll Be There (Charleon Remix)",
-      "artist": "Jess Glynne",
-      "type": "single",
-      "release_date": "2026-05-15",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/2UisHSnKxXssQClgyFV5Jr",
-      "total_tracks": 1
-    },
     "1my50kfCWILSC6UKkEgn9q": {
       "id": "1my50kfCWILSC6UKkEgn9q",
       "name": "it’s a real Cruel World",
@@ -437,56 +427,6 @@
       "release_date_precision": "day",
       "url": "https://open.spotify.com/album/2XyMvYW0CPR7P6vxSHFOd3",
       "total_tracks": 11
-    },
-    "0QoWsjIuyL43riq1RHsK2c": {
-      "id": "0QoWsjIuyL43riq1RHsK2c",
-      "name": "Never Lost (Luedji Luna Remix)",
-      "artist": "Kokoroko",
-      "type": "single",
-      "release_date": "2026-07-08",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/0QoWsjIuyL43riq1RHsK2c",
-      "total_tracks": 1
-    },
-    "1Eu5dUMQ6zBnwL0cNQ5V4c": {
-      "id": "1Eu5dUMQ6zBnwL0cNQ5V4c",
-      "name": "Sweetie (IZCO Remix)",
-      "artist": "Kokoroko",
-      "type": "single",
-      "release_date": "2026-06-12",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/1Eu5dUMQ6zBnwL0cNQ5V4c",
-      "total_tracks": 1
-    },
-    "6ZaJtyD6Zb53rMOtqPTJR1": {
-      "id": "6ZaJtyD6Zb53rMOtqPTJR1",
-      "name": "Brownswood Remix Editions 009 - Kokoroko Remixes",
-      "artist": "Kokoroko",
-      "type": "single",
-      "release_date": "2026-06-12",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/6ZaJtyD6Zb53rMOtqPTJR1",
-      "total_tracks": 1
-    },
-    "4oHRMGp6JIb6zqUQb4WPMu": {
-      "id": "4oHRMGp6JIb6zqUQb4WPMu",
-      "name": "Brownswood Remix Editions 009 - Kokoroko Remixes",
-      "artist": "Kokoroko",
-      "type": "single",
-      "release_date": "2026-06-12",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/4oHRMGp6JIb6zqUQb4WPMu",
-      "total_tracks": 3
-    },
-    "3eRJks5hFgoZnXhHlUDWt3": {
-      "id": "3eRJks5hFgoZnXhHlUDWt3",
-      "name": "Time & Time (feat. Demae) [IG Culture Remix]",
-      "artist": "Kokoroko",
-      "type": "single",
-      "release_date": "2026-05-13",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/3eRJks5hFgoZnXhHlUDWt3",
-      "total_tracks": 1
     },
     "2EAbXVmQUrylFiXVSQp6TJ": {
       "id": "2EAbXVmQUrylFiXVSQp6TJ",
@@ -1230,16 +1170,6 @@
       "url": "https://open.spotify.com/album/3oPUIxsRBq2riLShD6V2m8",
       "total_tracks": 22
     },
-    "0S5z3uSXJW1v8cNUJSW4OA": {
-      "id": "0S5z3uSXJW1v8cNUJSW4OA",
-      "name": "Satisfy (James Poole Remix)",
-      "artist": "Calvin Harris",
-      "type": "single",
-      "release_date": "2026-07-10",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/0S5z3uSXJW1v8cNUJSW4OA",
-      "total_tracks": 2
-    },
     "6NQWpbD3tPZi9b0WoCOLVs": {
       "id": "6NQWpbD3tPZi9b0WoCOLVs",
       "name": "Satisfy (Extended Mix)",
@@ -1290,16 +1220,6 @@
       "url": "https://open.spotify.com/album/2a7B8ngsOQDg0G5ejax0z2",
       "total_tracks": 3
     },
-    "6e6UkAyTbXyxZOBK2o2AGe": {
-      "id": "6e6UkAyTbXyxZOBK2o2AGe",
-      "name": "GIRLS (feat. Kehlani) [Remix]",
-      "artist": "The Kid LAROI",
-      "type": "single",
-      "release_date": "2026-06-12",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/6e6UkAyTbXyxZOBK2o2AGe",
-      "total_tracks": 1
-    },
     "5EvZ02qb4rHuVVzqgxkiG9": {
       "id": "5EvZ02qb4rHuVVzqgxkiG9",
       "name": "Bluffin' (with The Kid LAROI)",
@@ -1308,16 +1228,6 @@
       "release_date": "2026-06-03",
       "release_date_precision": "day",
       "url": "https://open.spotify.com/album/5EvZ02qb4rHuVVzqgxkiG9",
-      "total_tracks": 1
-    },
-    "0b0N7ZOdHWSlD1V8bDOuuC": {
-      "id": "0b0N7ZOdHWSlD1V8bDOuuC",
-      "name": "Sugar Rush (Roddy Lima Remix)",
-      "artist": "Daya",
-      "type": "single",
-      "release_date": "2026-06-05",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/0b0N7ZOdHWSlD1V8bDOuuC",
       "total_tracks": 1
     },
     "0SyyjYxgxMJH09uWIPYww7": {
@@ -1560,17 +1470,6 @@
       "url": "https://open.spotify.com/album/0JPItniR1C7tjd4ac2R1Vk",
       "total_tracks": 18
     },
-    "mb_4dc80212-219b-4eaf-b9da-ecc9166ebcfd": {
-      "id": "mb_4dc80212-219b-4eaf-b9da-ecc9166ebcfd",
-      "name": "petal",
-      "artist": "Ariana Grande",
-      "type": "album",
-      "release_date": "2026-07-31",
-      "release_date_precision": "day",
-      "url": "https://musicbrainz.org/release/4dc80212-219b-4eaf-b9da-ecc9166ebcfd",
-      "total_tracks": 12,
-      "upcoming": true
-    },
     "3Kl2WusJriZwxjNJTjbpPJ": {
       "id": "3Kl2WusJriZwxjNJTjbpPJ",
       "name": "ON 2 U",
@@ -1721,16 +1620,6 @@
       "url": "https://open.spotify.com/album/44yqXTltG5QhAnK1Myyz6G",
       "total_tracks": 8
     },
-    "6QcXrZaGM8gIrvSCNrVlUj": {
-      "id": "6QcXrZaGM8gIrvSCNrVlUj",
-      "name": "RED FLAG. (Chromeo Remix)",
-      "artist": "Kesha",
-      "type": "single",
-      "release_date": "2026-07-10",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/6QcXrZaGM8gIrvSCNrVlUj",
-      "total_tracks": 1
-    },
     "6HqkxDEfL9dJzSVYHFyDmG": {
       "id": "6HqkxDEfL9dJzSVYHFyDmG",
       "name": "DJ Turn It Down (with Kesha)",
@@ -1761,16 +1650,6 @@
       "url": "https://open.spotify.com/album/3ELRc5dM7WtbN2OSawC2tD",
       "total_tracks": 1
     },
-    "4MH2cB8M1yl9Gnz8r8bR0n": {
-      "id": "4MH2cB8M1yl9Gnz8r8bR0n",
-      "name": "Sick Of Love (Mura Masa Remix)",
-      "artist": "Mura Masa",
-      "type": "single",
-      "release_date": "2026-06-12",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/4MH2cB8M1yl9Gnz8r8bR0n",
-      "total_tracks": 1
-    },
     "0mNAQrOqBedUsrgonzxGmp": {
       "id": "0mNAQrOqBedUsrgonzxGmp",
       "name": "Tiroteo",
@@ -1799,16 +1678,6 @@
       "release_date": "2026-07-10",
       "release_date_precision": "day",
       "url": "https://open.spotify.com/album/0V3YKC3QI5P1sAjM4csXju",
-      "total_tracks": 1
-    },
-    "6AQiRXJ2i48Lu7CFUrKUER": {
-      "id": "6AQiRXJ2i48Lu7CFUrKUER",
-      "name": "Kygo Jo (feat. Lyng) [Kygo Remix]",
-      "artist": "Kygo",
-      "type": "single",
-      "release_date": "2026-07-07",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/6AQiRXJ2i48Lu7CFUrKUER",
       "total_tracks": 1
     },
     "0haLlb6CPtVmAQlasLrVFV": {
@@ -1923,17 +1792,6 @@
       "url": "https://open.spotify.com/album/4vaQP8ZoewwnTRfnnJOtwF",
       "total_tracks": 1
     },
-    "mb_a5dac098-0096-4d10-ab3e-82884bf130b7": {
-      "id": "mb_a5dac098-0096-4d10-ab3e-82884bf130b7",
-      "name": "petal",
-      "artist": "Ariana Grande",
-      "type": "album",
-      "release_date": "2026-07-31",
-      "release_date_precision": "day",
-      "url": "https://musicbrainz.org/release/a5dac098-0096-4d10-ab3e-82884bf130b7",
-      "total_tracks": 13,
-      "upcoming": true
-    },
     "0xbgE5GJtzcQbYwkGNu01T": {
       "id": "0xbgE5GJtzcQbYwkGNu01T",
       "name": "夜鷹 - Yodaka",
@@ -1973,36 +1831,6 @@
       "release_date_precision": "day",
       "url": "https://open.spotify.com/album/6QNIyLQwn3flkenCuuTevD",
       "total_tracks": 10
-    },
-    "2ihqr1W9lxyCdMZJutFnx0": {
-      "id": "2ihqr1W9lxyCdMZJutFnx0",
-      "name": "Silver Lining (Remixes)",
-      "artist": "Adi Oasis",
-      "type": "single",
-      "release_date": "2026-07-17",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/2ihqr1W9lxyCdMZJutFnx0",
-      "total_tracks": 4
-    },
-    "21BXqC8hKfboL8VhPADt20": {
-      "id": "21BXqC8hKfboL8VhPADt20",
-      "name": "Stuck In My Head (Kareem Ali Remix)",
-      "artist": "Adi Oasis",
-      "type": "single",
-      "release_date": "2026-07-16",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/21BXqC8hKfboL8VhPADt20",
-      "total_tracks": 1
-    },
-    "5iw0ebLlfvD8J5NcuNLFQk": {
-      "id": "5iw0ebLlfvD8J5NcuNLFQk",
-      "name": "Stuck In My Head (BELLA Remix)",
-      "artist": "Adi Oasis",
-      "type": "single",
-      "release_date": "2026-07-16",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/5iw0ebLlfvD8J5NcuNLFQk",
-      "total_tracks": 1
     },
     "7trAhaS6pcfzL8qLbTwird": {
       "id": "7trAhaS6pcfzL8qLbTwird",
@@ -2064,17 +1892,6 @@
       "url": "https://open.spotify.com/album/6kw0FvOg71b6xMKpOhRG9U",
       "total_tracks": 1
     },
-    "mb_ca46ef00-b400-429b-9b5e-084204d200f8": {
-      "id": "mb_ca46ef00-b400-429b-9b5e-084204d200f8",
-      "name": "petal",
-      "artist": "Ariana Grande",
-      "type": "album",
-      "release_date": "2026-07-31",
-      "release_date_precision": "day",
-      "url": "https://musicbrainz.org/release/ca46ef00-b400-429b-9b5e-084204d200f8",
-      "total_tracks": 12,
-      "upcoming": true
-    },
     "2krUDWgXUjP9FXeqXX3XtZ": {
       "id": "2krUDWgXUjP9FXeqXX3XtZ",
       "name": "Isn't it sweeter?",
@@ -2103,16 +1920,6 @@
       "release_date": "2026-05-15",
       "release_date_precision": "day",
       "url": "https://open.spotify.com/album/36TdhxyuiOIeDyAZuAgpBE",
-      "total_tracks": 1
-    },
-    "3q1XpPGD6ty6G3kAJYCQbj": {
-      "id": "3q1XpPGD6ty6G3kAJYCQbj",
-      "name": "Pumped Up Kicks (OMRI. Remix)",
-      "artist": "Foster The People",
-      "type": "single",
-      "release_date": "2026-07-17",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/3q1XpPGD6ty6G3kAJYCQbj",
       "total_tracks": 1
     },
     "4EIVhy9IO28A79FIsVGcEd": {
@@ -2291,11 +2098,8 @@
     "0KAcTbk2NXPCztnWzUkYGT",
     "0OAv7DCME2AV4q1KPO95HY",
     "0P6B5R3yRSkhkmequL5Yno",
-    "0QoWsjIuyL43riq1RHsK2c",
-    "0S5z3uSXJW1v8cNUJSW4OA",
     "0SyyjYxgxMJH09uWIPYww7",
     "0TdADwn8RBoyHpXlumCfgk",
-    "0b0N7ZOdHWSlD1V8bDOuuC",
     "0b1wTKStMRshCOhUnhfPXR",
     "0kpeTZy0ghMbYEesoL9xBE",
     "0lwUMyyqQX3KxuTV8TdYyj",
@@ -2311,7 +2115,6 @@
     "19cu33f4nHMSR9WtwCjDVS",
     "1Aye7tEOHfJ3hDJIeJFggF",
     "1BrSn9sWO3Gi5trDQdc44a",
-    "1Eu5dUMQ6zBnwL0cNQ5V4c",
     "1HRibxEOHHtZuhRMmCkpVO",
     "1HgxS3QtHoYbHvmjtHnsci",
     "1ND6tGCzJKjBigJfnBSEQl",
@@ -2332,7 +2135,6 @@
     "2HEYYrnIqfHaaGg3fUgEkd",
     "2QlGlvLUEon9SaUGNj78cy",
     "2TYtr1CCfYFlwf1k3hJ6S3",
-    "2UisHSnKxXssQClgyFV5Jr",
     "2V5SZ2L5qPE5E9JRqRlap2",
     "2WWjYjGbTrksiQ7Vo3lbzl",
     "2XyMvYW0CPR7P6vxSHFOd3",
@@ -2355,7 +2157,6 @@
     "3Wti4HDrcMs4mVBtBw6tIS",
     "3YXe92ndLsBiVqIehZXEV3",
     "3eRE0K2YoL3HkPUyJqBsVc",
-    "3eRJks5hFgoZnXhHlUDWt3",
     "3lk68Op8fiiIrdL1VLoHcp",
     "3oHzgpf1s3ZYxjcxrcofTa",
     "3oPUIxsRBq2riLShD6V2m8",
@@ -2374,7 +2175,6 @@
     "4bjpKHTLJ2FtOlzrdXDL1d",
     "4iOj6nJVkB4K9nbfLFIHC0",
     "4m6GR6j3TuDoLYrRl6CzvE",
-    "4oHRMGp6JIb6zqUQb4WPMu",
     "4qacLYxk6035s1OsFSLYUo",
     "4si3iSvc37V6BJHtQ6XEeI",
     "4tUAMM8IJoe58btljM4A8x",
@@ -2408,9 +2208,7 @@
     "6SC1rulRuCQizgLJVS2zHN",
     "6WHYJdxXL7sK9NDBLxOUMV",
     "6YN0lxBGhjZRm2vd6pCdtW",
-    "6ZaJtyD6Zb53rMOtqPTJR1",
     "6bkBdwYNeBqqLVF72acs0H",
-    "6e6UkAyTbXyxZOBK2o2AGe",
     "6nNJN0zUE7bA10yPeeAaXX",
     "6nilpOGqIruVfH4w5UDJlY",
     "6sTGPeQccQvmDiOIxJLZyD",

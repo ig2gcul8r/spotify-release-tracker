@@ -321,6 +321,10 @@ def parse_release_date(release: dict) -> datetime | None:
         return None
 
 
+def is_remix(name: str) -> bool:
+    return "remix" in name.casefold()
+
+
 # ========== ICS生成 ==========
 def escape_ics(text: str) -> str:
     return (
@@ -478,6 +482,9 @@ def main() -> None:
         spotify_keys = set()
         for r in releases:
             spotify_keys.add((r["artist"].casefold(), r["name"].casefold()))
+            if is_remix(r["name"]):
+                seen_ids.add(r["id"])  # 覚えておくが追跡はしない(毎回スキップするだけ)
+                continue
             dt = parse_release_date(r)
             if dt is None or dt < cutoff:
                 continue
@@ -487,12 +494,31 @@ def main() -> None:
                 if notifications_active:
                     new_releases.append(r)
 
+        # Spotify側に実物が出た予定(📅)は削除して重複を防ぐ
+        for rid in [
+            rid
+            for rid, rr in state["releases"].items()
+            if rr.get("upcoming")
+            and (rr["artist"].casefold(), rr["name"].casefold()) in spotify_keys
+        ]:
+            del state["releases"][rid]
+
+        # 既存の📅予定のキー(同名・別エディションの重複登録を防ぐため)
+        upcoming_keys = {
+            (rr["artist"].casefold(), rr["name"].casefold())
+            for rr in state["releases"].values()
+            if rr.get("upcoming")
+        }
+
         # MusicBrainzでリリース予定をチェック
         for u in mb_get_upcoming(artist["name"]):
+            if is_remix(u["name"]):
+                continue
             key = (u["artist"].casefold(), u["name"].casefold())
-            if key in spotify_keys:
-                continue  # Spotify側に既にある(=リリース済み)ものは除外
+            if key in spotify_keys or key in upcoming_keys:
+                continue  # Spotify側に既にある、または別エディションで登録済み
             state["releases"][u["id"]] = u
+            upcoming_keys.add(key)
             if u["id"] not in seen_ids:
                 seen_ids.add(u["id"])
                 if notifications_active:
