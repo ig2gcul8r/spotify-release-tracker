@@ -130,6 +130,7 @@
     "2NFCurzH6SlI23R0lF7HyS",
     "2Nn3huQ0a0z06EOjmjQBDQ",
     "2O0svJlQC5DiuiewpAfNSp",
+    "2O3LGXBZz0CMz9iwiDdYVC",
     "2OBCjQHamuBhnDjUAnWjro",
     "2QPDxtGm1JWMdXVaeAQIiT",
     "2QkC1yQIFbDVusHxd0D2UK",
@@ -576,16 +577,6 @@
       "release_date_precision": "day",
       "url": "https://open.spotify.com/album/5QFHiTkr2OHLAPRWvaD0Hw",
       "total_tracks": 1
-    },
-    "1HgxS3QtHoYbHvmjtHnsci": {
-      "id": "1HgxS3QtHoYbHvmjtHnsci",
-      "name": "Puberty 2 (10th Anniversary Deluxe Edition)",
-      "artist": "Mitski",
-      "type": "album",
-      "release_date": "2026-06-09",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/1HgxS3QtHoYbHvmjtHnsci",
-      "total_tracks": 13
     },
     "0uWQFPszr6SJZ695zVp029": {
       "id": "0uWQFPszr6SJZ695zVp029",
@@ -1143,7 +1134,7 @@
     "6ue29u7MnmM7oVtnHDXzAq": {
       "id": "6ue29u7MnmM7oVtnHDXzAq",
       "name": "Weekend",
-      "artist": "Khalid",
+      "artist": "MEDUZA",
       "type": "single",
       "release_date": "2026-07-17",
       "release_date_precision": "day",
@@ -2210,10 +2201,37 @@
       "url": "https://musicbrainz.org/release/f76c3a9e-59e2-40f5-83d5-71720d9ac5e9",
       "total_tracks": 0,
       "upcoming": true
+    },
+    "2O3LGXBZz0CMz9iwiDdYVC": {
+      "id": "2O3LGXBZz0CMz9iwiDdYVC",
+      "name": "Joy.",
+      "artist": "RAYE",
+      "type": "single",
+      "release_date": "2026-09-07",
+      "release_date_precision": "day",
+      "url": "https://open.spotify.com/album/2O3LGXBZz0CMz9iwiDdYVC",
+      "total_tracks": 1
     }
   },
   "first_run_done": true,
-  "cycle_checked": [],
+  "cycle_checked": [
+    "0cGUm45nv7Z6M6qdXYQGTX",
+    "0nnYdIpahs41QiZ9MWp5Wx",
+    "0xRXCcSX89eobfrshSVdyu",
+    "3SozjO3Lat463tQICI9LcE",
+    "3V0ZQW0dNuVaFtbVYgSI24",
+    "4ScCswdRlyA23odg9thgIO",
+    "4Xz4xoavFUPT15DBLNPzYj",
+    "5KKpBU5eC2tJDzf0wmlRp2",
+    "5cCLvnxYLQiKTRLRD2DHxw",
+    "5cj0lLjcoR7YOSnhnX0Po5",
+    "63iuP8EumHpqaaMKyi0pxO",
+    "6AO3in7TlN2ab2o5Cq5lrs",
+    "6P5NO5hzJbuOqSdyPB7SJM",
+    "6hp2uD84OrQ3u3ukmTjLz2",
+    "7JAG8hDvCiDFBJkTdOCJ6F",
+    "7tr9pbgNEKtG0GQTKe08Tz"
+  ],
   "playlist_id": "10j7gNDPw1Yj2EI9v6f7DZ",
   "playlist_synced_ids": [
     "03r9ISAWhPm7dwSFQS4izX",
