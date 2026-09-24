@@ -275,6 +275,7 @@
     "490RXPo7Zm3PATJMtUEtSM",
     "4AoTQB7rFy5beg3xFDsY1v",
     "4BKNpqrUgWxpA1d8u5e95j",
+    "4BP7yEXI97xJV4OjXdRSVE",
     "4BZydSQMfJNphTFZzyIxh5",
     "4EIVhy9IO28A79FIsVGcEd",
     "4FFiFxNWoEw85AUVowVqo0",
@@ -321,6 +322,7 @@
     "4tp9V7Xe6QYptqZhCIsakO",
     "4vMTbFzgFrwSTqwd00SB2I",
     "4vaQP8ZoewwnTRfnnJOtwF",
+    "4xUJTwmwemjf0r6dv0GqUs",
     "4xcl5LB8A8iunVOLXUEwbh",
     "4xpRM2I2QX0ZR13Tb7jMw3",
     "50FnWAYiSqpqwXkE7aQEDt",
@@ -511,16 +513,6 @@
     "mb_f76c3a9e-59e2-40f5-83d5-71720d9ac5e9"
   ],
   "releases": {
-    "18OwtNEeXcKttR8Y4WsNV2": {
-      "id": "18OwtNEeXcKttR8Y4WsNV2",
-      "name": "Water The Flowers",
-      "artist": "Claire Rosinkranz",
-      "type": "single",
-      "release_date": "2026-06-26",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/18OwtNEeXcKttR8Y4WsNV2",
-      "total_tracks": 3
-    },
     "5UamcRKGRLG1mxQ16aonmK": {
       "id": "5UamcRKGRLG1mxQ16aonmK",
       "name": "Is This Heaven? (Extended)",
@@ -581,26 +573,6 @@
       "url": "https://open.spotify.com/album/0b1wTKStMRshCOhUnhfPXR",
       "total_tracks": 1
     },
-    "4vMTbFzgFrwSTqwd00SB2I": {
-      "id": "4vMTbFzgFrwSTqwd00SB2I",
-      "name": "Promising Young Woman",
-      "artist": "Isabel LaRosa",
-      "type": "single",
-      "release_date": "2026-06-26",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/4vMTbFzgFrwSTqwd00SB2I",
-      "total_tracks": 7
-    },
-    "4bLThdUFHWgOgT0mjzp4Bz": {
-      "id": "4bLThdUFHWgOgT0mjzp4Bz",
-      "name": "My Boy",
-      "artist": "Bella Poarch",
-      "type": "single",
-      "release_date": "2026-06-26",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/4bLThdUFHWgOgT0mjzp4Bz",
-      "total_tracks": 2
-    },
     "19cu33f4nHMSR9WtwCjDVS": {
       "id": "19cu33f4nHMSR9WtwCjDVS",
       "name": "Changes Rising",
@@ -610,16 +582,6 @@
       "release_date_precision": "day",
       "url": "https://open.spotify.com/album/19cu33f4nHMSR9WtwCjDVS",
       "total_tracks": 2
-    },
-    "1jWyDJiCWPOp0Xq3dvDxos": {
-      "id": "1jWyDJiCWPOp0Xq3dvDxos",
-      "name": "Luv Language",
-      "artist": "Jeff Bernat",
-      "type": "album",
-      "release_date": "2026-06-26",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/1jWyDJiCWPOp0Xq3dvDxos",
-      "total_tracks": 10
     },
     "5WNB3u6DDUlugkKqKWAmqo": {
       "id": "5WNB3u6DDUlugkKqKWAmqo",
@@ -661,16 +623,6 @@
       "url": "https://open.spotify.com/album/4Wa07ZTBEshnd57JomGmij",
       "total_tracks": 23
     },
-    "3oPUIxsRBq2riLShD6V2m8": {
-      "id": "3oPUIxsRBq2riLShD6V2m8",
-      "name": "SWAG LIVE FROM COACHELLA (Weekend I)",
-      "artist": "Justin Bieber",
-      "type": "album",
-      "release_date": "2026-06-26",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/3oPUIxsRBq2riLShD6V2m8",
-      "total_tracks": 22
-    },
     "0n5YYhYgbub1k0ViN1p67E": {
       "id": "0n5YYhYgbub1k0ViN1p67E",
       "name": "Rotation",
@@ -691,26 +643,6 @@
       "url": "https://open.spotify.com/album/54oXdjeIa7NuR9UejOjnIJ",
       "total_tracks": 6
     },
-    "72Vxnc1Jz923ls86p9mCJe": {
-      "id": "72Vxnc1Jz923ls86p9mCJe",
-      "name": "Victory",
-      "artist": "Madeon",
-      "type": "album",
-      "release_date": "2026-06-26",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/72Vxnc1Jz923ls86p9mCJe",
-      "total_tracks": 10
-    },
-    "0suZhbQGlYXSSDqOKY7pVA": {
-      "id": "0suZhbQGlYXSSDqOKY7pVA",
-      "name": "I'm Summer (Ross from Friends Rework)",
-      "artist": "Ross from Friends",
-      "type": "single",
-      "release_date": "2026-06-26",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/0suZhbQGlYXSSDqOKY7pVA",
-      "total_tracks": 1
-    },
     "13CPVtREWSJymHmcsx6d8e": {
       "id": "13CPVtREWSJymHmcsx6d8e",
       "name": "I Don't Wanna Hurt You (Dub Edit)",
@@ -720,26 +652,6 @@
       "release_date_precision": "day",
       "url": "https://open.spotify.com/album/13CPVtREWSJymHmcsx6d8e",
       "total_tracks": 2
-    },
-    "5ZKl6FzFtBJc3edhG04gxW": {
-      "id": "5ZKl6FzFtBJc3edhG04gxW",
-      "name": "is it cool? (feat. SZA)",
-      "artist": "SZA",
-      "type": "single",
-      "release_date": "2026-06-26",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/5ZKl6FzFtBJc3edhG04gxW",
-      "total_tracks": 1
-    },
-    "3ELRc5dM7WtbN2OSawC2tD": {
-      "id": "3ELRc5dM7WtbN2OSawC2tD",
-      "name": "Needja",
-      "artist": "Mura Masa",
-      "type": "single",
-      "release_date": "2026-06-26",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/3ELRc5dM7WtbN2OSawC2tD",
-      "total_tracks": 1
     },
     "0V3YKC3QI5P1sAjM4csXju": {
       "id": "0V3YKC3QI5P1sAjM4csXju",
@@ -874,7 +786,7 @@
     "6ue29u7MnmM7oVtnHDXzAq": {
       "id": "6ue29u7MnmM7oVtnHDXzAq",
       "name": "Weekend",
-      "artist": "Khalid",
+      "artist": "MEDUZA",
       "type": "single",
       "release_date": "2026-07-17",
       "release_date_precision": "day",
@@ -900,16 +812,6 @@
       "release_date_precision": "day",
       "url": "https://open.spotify.com/album/2krUDWgXUjP9FXeqXX3XtZ",
       "total_tracks": 6
-    },
-    "3vvhITB6TM8jcF4bYXVXfv": {
-      "id": "3vvhITB6TM8jcF4bYXVXfv",
-      "name": "Proof",
-      "artist": "Ally Salort",
-      "type": "single",
-      "release_date": "2026-06-26",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/3vvhITB6TM8jcF4bYXVXfv",
-      "total_tracks": 1
     },
     "4EIVhy9IO28A79FIsVGcEd": {
       "id": "4EIVhy9IO28A79FIsVGcEd",
@@ -2311,10 +2213,66 @@
       "release_date_precision": "day",
       "url": "https://open.spotify.com/album/5AIqd7wpBImJ1G0MAXR3tf",
       "total_tracks": 1
+    },
+    "4BP7yEXI97xJV4OjXdRSVE": {
+      "id": "4BP7yEXI97xJV4OjXdRSVE",
+      "name": "Life 1 (where did the time go)",
+      "artist": "Quadeca",
+      "type": "single",
+      "release_date": "2026-09-21",
+      "release_date_precision": "day",
+      "url": "https://open.spotify.com/album/4BP7yEXI97xJV4OjXdRSVE",
+      "total_tracks": 4
+    },
+    "4xUJTwmwemjf0r6dv0GqUs": {
+      "id": "4xUJTwmwemjf0r6dv0GqUs",
+      "name": "無機質",
+      "artist": "Aogumo",
+      "type": "single",
+      "release_date": "2026-09-23",
+      "release_date_precision": "day",
+      "url": "https://open.spotify.com/album/4xUJTwmwemjf0r6dv0GqUs",
+      "total_tracks": 1
     }
   },
   "first_run_done": true,
-  "cycle_checked": [],
+  "cycle_checked": [
+    "00x1fYSGhdqScXBRpSj3DW",
+    "0AsThoR4KZSVktALiNcQwW",
+    "0cGUm45nv7Z6M6qdXYQGTX",
+    "0nnYdIpahs41QiZ9MWp5Wx",
+    "0xRXCcSX89eobfrshSVdyu",
+    "0xj0ImQUd00Ed8Xzwr0u3L",
+    "1AaSeUFzwt47HhkGtWE1xn",
+    "2FjzRd1bgtsmhESettmFAN",
+    "2XQ62qYdxJwZ66hEoJr5Ml",
+    "2vTfPvhJkpW1DTjmMvHjOB",
+    "2yLzlEFtIS0Q9UkyBZdQA7",
+    "3SozjO3Lat463tQICI9LcE",
+    "3V0ZQW0dNuVaFtbVYgSI24",
+    "3zz52ViyCBcplK0ftEVPSS",
+    "4DHLoiIqFYYFjH09WduvFd",
+    "4ScCswdRlyA23odg9thgIO",
+    "4Xz4xoavFUPT15DBLNPzYj",
+    "4yvcSjfu4PC0CYQyLy4wSq",
+    "55Dacc2jL4tgb6Af23NlF6",
+    "5KKpBU5eC2tJDzf0wmlRp2",
+    "5XKFrudbV4IiuE5WuTPRmT",
+    "5aCs1cmbReUSJ4K9SuOYCx",
+    "5cCLvnxYLQiKTRLRD2DHxw",
+    "5cj0lLjcoR7YOSnhnX0Po5",
+    "605C4AcUUwB66JjpKjX1aO",
+    "63iuP8EumHpqaaMKyi0pxO",
+    "6AO3in7TlN2ab2o5Cq5lrs",
+    "6I8TDGeUmmLom8auKPzMdX",
+    "6MERXsiRbur2oJZFgYRDKz",
+    "6NufSYYINeynKg28cGEB2p",
+    "6P5NO5hzJbuOqSdyPB7SJM",
+    "6VuMaDnrHyPL1p4EHjYLi7",
+    "6hp2uD84OrQ3u3ukmTjLz2",
+    "7JAG8hDvCiDFBJkTdOCJ6F",
+    "7tr9pbgNEKtG0GQTKe08Tz"
+  ],
   "playlist_id": "10j7gNDPw1Yj2EI9v6f7DZ",
   "playlist_synced_ids": [
     "03r9ISAWhPm7dwSFQS4izX",
@@ -2526,6 +2484,7 @@
     "56ffsKpmrSHTHAeOedwE8D",
     "56he7oUVL6bHVhaq2FpVzV",
     "59OKhlswkcqAh5crQwSRlC",
+    "5AIqd7wpBImJ1G0MAXR3tf",
     "5EvZ02qb4rHuVVzqgxkiG9",
     "5FKnRUB5lt7z5ac1lmu3BE",
     "5HA3LV3gpwjNDl2cjkzHYm",
