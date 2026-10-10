@@ -1368,17 +1368,6 @@
       "url": "https://open.spotify.com/album/1w0VJUqClIKvyXDdIqbWxx",
       "total_tracks": 3
     },
-    "mb_cf3b841e-907c-4384-b9a0-0c0c0103de69": {
-      "id": "mb_cf3b841e-907c-4384-b9a0-0c0c0103de69",
-      "name": "Short n’ Sweet",
-      "artist": "Sabrina Carpenter",
-      "type": "album",
-      "release_date": "2026-10-09",
-      "release_date_precision": "day",
-      "url": "https://musicbrainz.org/release/cf3b841e-907c-4384-b9a0-0c0c0103de69",
-      "total_tracks": 12,
-      "upcoming": true
-    },
     "2g6XbbyPIPRMa2P1ildhza": {
       "id": "2g6XbbyPIPRMa2P1ildhza",
       "name": "serena joy",
@@ -1471,17 +1460,6 @@
       "release_date_precision": "day",
       "url": "https://open.spotify.com/album/4HLkCvdBUOzeXOlcirgaSN",
       "total_tracks": 1
-    },
-    "mb_85369fd3-2925-44bc-88fd-c858efdff2cf": {
-      "id": "mb_85369fd3-2925-44bc-88fd-c858efdff2cf",
-      "name": "Palace for the People",
-      "artist": "Greta Van Fleet",
-      "type": "album",
-      "release_date": "2026-10-09",
-      "release_date_precision": "day",
-      "url": "https://musicbrainz.org/release/85369fd3-2925-44bc-88fd-c858efdff2cf",
-      "total_tracks": 13,
-      "upcoming": true
     },
     "6QBrprj7Eorc6ntNxZ5hp9": {
       "id": "6QBrprj7Eorc6ntNxZ5hp9",
@@ -2479,17 +2457,6 @@
       "url": "https://open.spotify.com/album/4gvyJRNQPBb1kOWqwZjUYI",
       "total_tracks": 15
     },
-    "mb_01e43bd9-03b5-445b-9da3-25ac2b6b4ab1": {
-      "id": "mb_01e43bd9-03b5-445b-9da3-25ac2b6b4ab1",
-      "name": "Ambiguous Desire (Deluxe)",
-      "artist": "Arlo Parks",
-      "type": "album",
-      "release_date": "2026-10-09",
-      "release_date_precision": "day",
-      "url": "https://musicbrainz.org/release/01e43bd9-03b5-445b-9da3-25ac2b6b4ab1",
-      "total_tracks": 20,
-      "upcoming": true
-    },
     "7LNwpQkOS7ueH27NbfJLtj": {
       "id": "7LNwpQkOS7ueH27NbfJLtj",
       "name": "Like Kids In The Sun",
@@ -2638,6 +2605,7 @@
     "74KM79TiuVKeVCqs8QtB0B",
     "7JAG8hDvCiDFBJkTdOCJ6F",
     "7aFTOGFDEqDtJUCziLVsVC",
+    "7dc6hUwyuIhrZdh80eaCEE",
     "7eOzCiTklgHxfpf6Mb3D2e",
     "7gW0r5CkdEUMm42w9XpyZO",
     "7jAeRfT8LYCxydM2Y1Egvn",
@@ -2737,6 +2705,7 @@
     "22rS66rQqJJEWCgpk7i6es",
     "22uUjNDqFYV6lcBH5JPyE0",
     "26czVqzKxO3D1ZOPMJQcks",
+    "2733B4ZbonqyWq1Od3B0OD",
     "2EAbXVmQUrylFiXVSQp6TJ",
     "2ECtE6qdG5osFYVj6y2b2D",
     "2F1FhufyLQkZ8laR5PckEx",
@@ -2849,6 +2818,7 @@
     "4WMyVgVK30wyWiFl87UnC2",
     "4Wa07ZTBEshnd57JomGmij",
     "4Y9GUd3KzAXSu3TZiYbNQE",
+    "4a7uDfBpgOkxIB4LfZuhkj",
     "4bLThdUFHWgOgT0mjzp4Bz",
     "4bjpKHTLJ2FtOlzrdXDL1d",
     "4cVVeSZj5DgYvOQiyh34vB",
@@ -2969,6 +2939,7 @@
     "77lHr1rXYAkLjOVkcSXLGH",
     "780e5rUfJBSlrsjMHjhtzg",
     "7B2l5FYC0Znr1Otvtai2TA",
+    "7BCncCfZQG45VHiwb2Xkce",
     "7DijESNKToR0E0v9X72ksc",
     "7E7ldaTtHThRPsE6uQaPqR",
     "7EXuRlGOKcBxzvQOCfuHGG",
