@@ -643,17 +643,6 @@
     "mb_f76c3a9e-59e2-40f5-83d5-71720d9ac5e9"
   ],
   "releases": {
-    "mb_d9801d14-1fd9-430c-b828-bc3c1e116c2a": {
-      "id": "mb_d9801d14-1fd9-430c-b828-bc3c1e116c2a",
-      "name": "A Safe Place To Be Wild",
-      "artist": "Jordan Rakei",
-      "type": "album",
-      "release_date": "2026-10-30",
-      "release_date_precision": "day",
-      "url": "https://musicbrainz.org/release/d9801d14-1fd9-430c-b828-bc3c1e116c2a",
-      "total_tracks": 14,
-      "upcoming": true
-    },
     "5OLZaKehHQWReU2imBsmj9": {
       "id": "5OLZaKehHQWReU2imBsmj9",
       "name": "Great Expectation",
@@ -663,16 +652,6 @@
       "release_date_precision": "day",
       "url": "https://open.spotify.com/album/5OLZaKehHQWReU2imBsmj9",
       "total_tracks": 2
-    },
-    "0fO1iycXEWHMdrEUxM7Lry": {
-      "id": "0fO1iycXEWHMdrEUxM7Lry",
-      "name": "Ups＆Downs",
-      "artist": "ONE LOVE ONE HEART",
-      "type": "single",
-      "release_date": "2026-08-02",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/0fO1iycXEWHMdrEUxM7Lry",
-      "total_tracks": 1
     },
     "04qmxEtttzyhoSzWWe5Kb0": {
       "id": "04qmxEtttzyhoSzWWe5Kb0",
@@ -2838,6 +2817,7 @@
     "1O235Li0262kkP7gfP6B5W",
     "1YcprGtF13BYCZQK9jYPEw",
     "1eNO1DUCOtZgCzlwtjtb1t",
+    "1eucAy25drcLdWgLVTTb8r",
     "1gR0gsQYfi6joyO1dlp76N",
     "1gjcLvf9YDsoMiLWQT6spd",
     "1mnAFQLFTaUbccNqvK5pqX",
@@ -3060,6 +3040,7 @@
     "0vctNx110Y9W5DN5Nd25RF",
     "0wP1ridvw0gHq6gOkIrLBU",
     "0xbgE5GJtzcQbYwkGNu01T",
+    "0y0wLmGYjhB4lrjUSHgM2f",
     "10X7eWdax1sEMLzXZLusqW",
     "12V1hva5bUdoC8rKCS5Yy6",
     "13CPVtREWSJymHmcsx6d8e",
@@ -3074,6 +3055,7 @@
     "1AmI2JkYhtQj1ZrswQBMcw",
     "1Aye7tEOHfJ3hDJIeJFggF",
     "1BrSn9sWO3Gi5trDQdc44a",
+    "1D2Gra2OoYcxta143gkvng",
     "1FXeMqFudkoQ0SkBxekpQE",
     "1HRibxEOHHtZuhRMmCkpVO",
     "1HgxS3QtHoYbHvmjtHnsci",
@@ -3127,6 +3109,7 @@
     "2ECtE6qdG5osFYVj6y2b2D",
     "2F1FhufyLQkZ8laR5PckEx",
     "2FO2Y8abEsCT10uLce2Thh",
+    "2Fm608LcXurMmNbGIjZuLx",
     "2GLrbPiNZrX5V6IfwCQpEF",
     "2Gda3n8wksh8dnHDLAoIj3",
     "2HEYYrnIqfHaaGg3fUgEkd",
@@ -3253,6 +3236,7 @@
     "4XqDX4ElfD8ZDN0xr7SP0W",
     "4Y9GUd3KzAXSu3TZiYbNQE",
     "4a7uDfBpgOkxIB4LfZuhkj",
+    "4bBSY471cBwrKqLFT2WP1q",
     "4bLThdUFHWgOgT0mjzp4Bz",
     "4bjpKHTLJ2FtOlzrdXDL1d",
     "4cVVeSZj5DgYvOQiyh34vB",
@@ -3313,6 +3297,7 @@
     "5eMSxw5F43b9x6J9NCzoc2",
     "5hYAA9mL3awoyP8Nfy4ocM",
     "5hnGoe5LR6IpFvZLXGfaYz",
+    "5hqIC9qQ8VIAH7Jztjub93",
     "5kkZVGW8dox7UUbl1rkXBK",
     "5mutH6AczN5onZ1binwkvO",
     "5nund6o0WvCV0ezuKxJ9Fx",
@@ -3400,6 +3385,7 @@
     "7EXuRlGOKcBxzvQOCfuHGG",
     "7FLJw9LUKwmtGREi55tWfJ",
     "7FTXtGd2zNyN3zZA3ntMZr",
+    "7HHoNo62TM8xfqtVpdyeRE",
     "7Ij1nC8jKGcc0ni3Q7TsVQ",
     "7LNwpQkOS7ueH27NbfJLtj",
     "7MDH01wqb7D5enJod7SwOj",
