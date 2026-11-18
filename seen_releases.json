@@ -735,16 +735,6 @@
       "url": "https://open.spotify.com/album/53Rf76kJAhJNtyrxLgKTRa",
       "total_tracks": 12
     },
-    "3Kfjc4xjTZqFjHDcjgvrhA": {
-      "id": "3Kfjc4xjTZqFjHDcjgvrhA",
-      "name": "Hot To Go",
-      "artist": "Mae Stephens",
-      "type": "single",
-      "release_date": "2026-08-20",
-      "release_date_precision": "day",
-      "url": "https://open.spotify.com/album/3Kfjc4xjTZqFjHDcjgvrhA",
-      "total_tracks": 1
-    },
     "6KgGRFQlUvSPKBOCnPAQk7": {
       "id": "6KgGRFQlUvSPKBOCnPAQk7",
       "name": "Wish You Were Here",
@@ -3300,6 +3290,7 @@
     "04YZhUE8sPzCY0tamvhUJ6",
     "04qmxEtttzyhoSzWWe5Kb0",
     "072GHWDJ7BPGYKHlddwgDJ",
+    "07Q9bUJarYrFjhxofoenM0",
     "09JgaY8X1pjMhllG2HSdiF",
     "09MFYa0kaj2G2LpRZfKUyo",
     "0AZ9wbbbM32nrzD8czHDwX",
@@ -3318,6 +3309,7 @@
     "0R7lKm7pMZHjdrY1UVcc02",
     "0RIDUo6VfxAwdsLIT8j4bx",
     "0SqDA9jpDJeC1uSwq7Lp35",
+    "0SyEZNJtX9UyTHY5EuN07q",
     "0SyyjYxgxMJH09uWIPYww7",
     "0TdADwn8RBoyHpXlumCfgk",
     "0TvqTJFg16QrqQEXMfHViV",
@@ -3469,6 +3461,7 @@
     "2mG7Jq4OnkQdpmemAmtXAQ",
     "2nOFPiKwZSQccxG0lakaEV",
     "2pMOWlF8r0xfUkrloQEO49",
+    "2r0RZF6OMU1nxJTeI8rgjg",
     "2sEyqyFIHFXuQeuXHzAQj1",
     "2sVYM7Tc0VWHcYQJE4O1Nd",
     "2sg0EOKhfLs82VNmQOcUWD",
@@ -3665,6 +3658,7 @@
     "691EPq3n7tkZFi6rbKZ7q2",
     "69UHydI2nE7iN0Idu3Apb7",
     "69WMt9yTuyzIIeMoRp0ti1",
+    "6BPFXxkpETKQklASxmLujm",
     "6BuY0ylaghbGdm5ohYl30w",
     "6CACyqngQWTOAM1UpAtco3",
     "6CQ0DN6ovZhxyECQwmqwrJ",
